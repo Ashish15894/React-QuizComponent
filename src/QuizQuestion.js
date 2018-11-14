@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import QuizQuestionButton from './QuizQuestionButton.js'
-import { options } from 'sw-toolbox';
+
 
 class QuizQuestion extends Component {
     handleClick(buttonText){
@@ -19,7 +19,9 @@ class QuizQuestion extends Component {
                   <section className="buttons">
                   <ul>
                       {this.props.quiz_question.answer_options.map((answer_option,index)=>{
-                          return <QuizQuestionButton key={index} button_text={answer_option}clickHandler={this.handleClick.bind(this)}/>
+                          return <QuizQuestionButton key={index} button_text={answer_option}
+                          clickHandler={this.handleClick.bind(this)}/>
+                          
                       })}
                   
                   </ul>
